@@ -25,7 +25,7 @@
 
 
   <title>LLMR: Real-time Prompting of Interactive Worlds using Large Language Models</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -181,30 +181,119 @@
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/teaser.png" alt="This figure showcases various use cases and functionalities of LLMR, including creating a kitchen scene from scratch, drawing objects into existence, integrating with external plugins, editing existing VR scenes, generating instructional guides, and ensuring cross-platform compatibility. " />
                         <h2 class="subtitle has-text-centered">
-                            First image description.
+                            Examples of diverse use cases and functionalities enabled by LLMR. A: Creation of a kitchen scene from scratch using Unity primitives. B: Prompting and drawing objects into existence via multi-modal interactions. C: Integration with external plugins like SketchFab to create high-fidelity scenes and prompting skills like animation creation. D: Edit existing VR scenes. E: Automated generation of instructional guides and QA with scene knowledge. F: Cross-platform compatibility and external sensor integration.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/access.png" alt="This figure demonstrates three examples of accessible interface features in a kitchen scene. The first example shows how the color scheme can be adjusted for red-green color-blind compatibility. The second example demonstrates the use of a magnifier tool to focus attention. The third example shows how objects deemed not kid-friendly can be hidden for safety and customization. " />
                         <h2 class="subtitle has-text-centered">
-                            Second image description.
+                            Accessible Interface Features in Action. A1 and A2 show how a user can prompt the system to adjust the color scheme of a kitchen scene for red-green color-blind compatibility. B1 and B2 demonstrate the activation of a magnifier tool which can be used to focus attention. C1 and C2 reveal the option to hide objects deemed not kid-friendly, enhancing safety and customization.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/gaming.png" alt="This figure showcases the cross-platform and cross-scene transferability of LLMR. It displays a car created by LLMR in three different scenarios: in a basic Unity scene, in a scene with moon-like gravity and terrain, and in a real-world scene controlled by a user's mobile phone. " />
                         <h2 class="subtitle has-text-centered">
-                            Third image description.
+                            Cross-Platform and Cross-Scene Transferability made possible by LLMR. The left panel shows a car automatically created by LLMR using Unity primitives, complete with color and composite features (e.g. wheels and headlights), controllable via keyboard inputs. The middle panel displays the same car transferred to a different Unity scene featuring moon-like gravity and terrain. The right panel showcases the framework's adaptability across platforms by illustrating how the car can collide with objects in the physical world and can be controlled using IMU data from a user's mobile phone.
                         </h2>
                     </div>
                     <div class="item">
                         <!-- Your image here -->
-                        <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+                        <img src="static/images/creativity.png" alt="This figure demonstrates the use of LLMR in creating 3D models in VR. It shows a user requesting a magic paintbrush, drawing a chair with the paintbrush, and then generating multiple chair models using 2D-3D ControlNet and Dall·E-CLIP Sketchfab API." />
                         <h2 class="subtitle has-text-centered">
-                            Fourth image description.
+                            Sketching objects into existence with LLMR. In the left panel, a user requests a "magic paintbrush" to be attached to a VR controller. The middle panel illustrates the automatic conversion of the line renderer into a paintbrush, where the user is shown drawing a chair. The right panel demonstrates the 2D-to-3D transformation using 2D-3D ControlNet and our Dall·E-CLIP Sketchfab API. This enables the generation of multiple chair models that can then be transferred across different platforms using LLMR for further interaction.
+                        </h2>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End image carousel -->
+    
+    
+    <!-- Youtube video -->
+   <!-- <section class="hero is-small is-light">
+        <div class="hero-body">
+            <div class="container"> -->
+                <!-- Paper video. -->
+            <!--   <h2 class="title is-3">Video Presentation</h2>
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-four-fifths">
+
+                        <div class="publication-video">  --> 
+                            <!-- Youtube embed code here -->
+             <!--             <iframe src="https://www.youtube.com/embed/6_9IcuKLwdc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    -->  
+    <!-- End youtube video -->
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">How does LLMR work?</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                        LLMR is an orchestration of an ensemble of specialized GPTs. At its center is the BuilderGPT serving as an architect of C# Unity code for crafting interactive scenes. However, the multitude of tasks falling under virtual world creation renders a standalone coder insufficient. For instance, the ability to meaningfully modify an existing virtual world necessitates a profound semantic understanding of the scene. As humans, we have the ability to infer the properties of objects in the world and can refer to objects in the environment using demonstratives. To simulate the benefits of perceptual access, we incorporated the Scene Analyzer GPT. It generates a comprehensive summary of scene objects, offering detailed information when requested, including aspects like size, color, and the functionalities of interactive tools previously generated by LLMR. We also implemented the Skill Library GPT that determines the relevant skills that are needed for the Builder to accomplish the user’s request. In addition, we have observed that the code generated by the Builder lacks robustness and frequently contains bugs. To remedy this, we introduce the InspectorGPT, which evaluates the Builder's code against a predefined set of rules. This evaluation acts as a protective measure against compilation and run-time errors before the code is executed via the Roslyn Compiler.                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Image carousel -->
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/llmr_overview.png" alt="This figure shows the architecture of the LLMR system for real-time interactive 3D scene generation. It consists of a user prompt and an existing 3D scene as inputs, and a sequence of modules including the Planner, Scene Analyzer, Skill Library, Builder, Inspector, and Compiler. These modules work together to generate the desired 3D scene and functionalities in the Unity Engine. " />
+                        <h2 class="subtitle has-text-centered">
+                            LLMR architecture for real-time interactive 3D scene generation. Starting from the left, a user prompt and the existing 3D scene  are fed into the Planner and Scene Analyzer (SA) modules, respectively. The Planner decomposes the user prompt into a sequence of sub-prompts, while the SA summarizes the current scene elements. These are then integrated with a Skill Library (SL) to guide theBuilder module, which generates the appropriate code. The Inspector module iteratively checks the generated code for compilation and run-time errors. Upon receiving the green light from the Inspector, the code is compiled using the Roslyn Compiler and executed in the Unity Engine to produce the desired 3D scene and functionalities as specified by the user.
+                        </h2>
+                    </div>
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/planner.png" alt="This figure shows the process of breaking down a user's high-level request into manageable subtasks. It includes a conversation between the user and the Planner, who determines the appropriate scope and granularity of each subtask. The Builder then executes the plan by generating code for each subtask. " />
+                        <h2 class="subtitle has-text-centered">
+                            The Planner and its role in breaking down a user's high-level request into a sequence of manageable subtasks.
+                        </h2>
+                    </div>
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/analyzer.png" alt="This figure shows the process of the LLMR Scene Analyzer. The input is a virtual scene in JSON format and the user request. The output is a filtered summary of the scene, which is used for conditioning subsequent modules. This process optimizes the utilization of the language model's fixed context window and enhances focus on objects relevant to the user prompt. " />
+                        <h2 class="subtitle has-text-centered">
+                            The virtual scene, depicted in the bottom-left corner, is converted into a parsed scene hierarchy in JSON format. This, along with the user request, serves as input to the Scene Analyzer. The output is a filtered, relevant summary of the scene, which is then used for conditioning subsequent modules like the Builder. The process optimizes the utilization of the language model's fixed context window and enhances focus on objects relevant to the user prompt.
+                        </h2>
+                    </div>
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/builderInspector.png" alt="This figure illustrates the Builder-Inspector loop in LLMR, where the Builder module generates code based on user input and current state, and the Inspector module checks for errors and provides suggestions for corrections. The figure shows two iterations. " />
+                        <h2 class="subtitle has-text-centered">
+                            Builder-Inspector paradigm in LLMR. The Builder module generates code based on user input and current state. The generated code is then inspected by the Inspector module for compilation and run-time errors. If errors are found the Inspector provides suggestions for corrections. The process iterates until either the code passes inspection or a maximum number of inspections is reached. This feedback loop significantly enhances the quality of the generated scripts.
+                        </h2>
+                    </div>
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/skillLib.png" alt="A diagram representing the workflow of the Skill Library module. The module receives inputs from the Scene Analyzer and a user prompt, and then outputs the most relevant skills to the Builder for implementation." />
+                        <h2 class="subtitle has-text-centered">
+                            Skill Library module workflow. On the left, the module receives inputs from the Scene Analyzer and a user prompt "create a whale and make it swim happily". A list of skills is provided to the SL GPT module in its metaprompt, which also contains a high-level summary of available skills such as object retrieval and animation. The module then identifies and outputs the most relevant skills (in this case, object retriever and animation) to the Builder, which subsequently utilizes these tools for implementation.                        
+                        </h2>
+                    </div>
+                    <div class="item">
+                        <!-- Your image here -->
+                        <img src="static/images/dalle.png" alt="This figure shows the Object Retriever pipeline for generating a 3D scene. The user inputs a prompt for a scene containing specific objects, and the pipeline uses DALL-E 2, Sketchfab API, and CLIP to find the best matches for each object and assemble them into a complete 3D scene. The output is a 3D scene with the specified objects arranged in a realistic manner. " />
+                        <h2 class="subtitle has-text-centered">
+                            Object Retriever pipeline for generating a 3D scene. The user provides a prompt for a scene containing a clock, a picture frame, a chair, and an apple on a table. For each object (e.g. clock), the pipeline uses DALL-E 2 to create a target 3D image. Concurrently, multiple screenshots of potential matches from open-source Sketchfab models are downloaded using the object label as the query. CLIP is employed to generate embeddings for these images which includes the target image. The top 5 candidates in the language similarity space are selected. The final object is then chosen based on the highest visual similarity to the target image. This sequence is repeated for each object in the prompt to assemble the complete 3D scene, as shown on the far right.
                         </h2>
                     </div>
                 </div>
@@ -212,50 +301,24 @@
         </div>
     </section>
     <!-- End image carousel -->
-    <!-- Youtube video -->
-    <section class="hero is-small is-light">
-        <div class="hero-body">
-            <div class="container">
-                <!-- Paper video. -->
-                <h2 class="title is-3">Video Presentation</h2>
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
 
-                        <div class="publication-video">
-                            <!-- Youtube embed code here -->
-                            <iframe src="https://www.youtube.com/embed/6_9IcuKLwdc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End youtube video -->
     <!-- Video carousel -->
     <section class="hero is-small">
         <div class="hero-body">
             <div class="container">
-                <h2 class="title is-3">Another Carousel</h2>
+                <h2 class="title is-3">Additional videos</h2>
                 <div id="results-carousel" class="carousel results-carousel">
                     <div class="item item-video1">
                         <video poster="" id="video1" autoplay controls muted loop height="100%">
                             <!-- Your video file here -->
-                            <source src="static/videos/carousel1.mp4"
+                            <source src="static/videos/animations.mp4"
                                     type="video/mp4">
                         </video>
                     </div>
                     <div class="item item-video2">
                         <video poster="" id="video2" autoplay controls muted loop height="100%">
                             <!-- Your video file here -->
-                            <source src="static/videos/carousel2.mp4"
-                                    type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="item item-video3">
-                        <video poster="" id="video3" autoplay controls muted loop height="100%">
-                            \
-                            <!-- Your video file here -->
-                            <source src="static/videos/carousel3.mp4"
+                            <source src="static/videos/Participant_Generated_Results.mp4"
                                     type="video/mp4">
                         </video>
                     </div>
