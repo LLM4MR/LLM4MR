@@ -90,20 +90,20 @@
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
                                         </span>
-                                        <span>Paper</span>
+                                        <span>System Paper</span>
                                     </a>
                                 </span>
 
                                 <!-- Supplementary PDF link -->
-                                <!--     <span class="link-block">
-                                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                                    class="external-link button is-normal is-rounded is-dark">
-                                    <span class="icon">
-                                      <i class="fas fa-file-pdf"></i>
-                                    </span>
-                                    <span>Supplementary</span>
-                                  </a>
-                                </span>-->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2310.17838.pdf" target="_blank"
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Animation Paper (Accepted to ML4CD 2023)</span>
+                                    </a>
+                                </span>
                                 <!-- Github link -->
                                 <span class="link-block">
                                     <a class="external-link button is-normal is-rounded is-dark">
@@ -206,32 +206,30 @@
                         <h2 class="subtitle has-text-centered">
                             Sketching objects into existence with LLMR. In the left panel, a user requests a "magic paintbrush" to be attached to a VR controller. The middle panel illustrates the automatic conversion of the line renderer into a paintbrush, where the user is shown drawing a chair. The right panel demonstrates the 2D-to-3D transformation using 2D-3D ControlNet and our Dall·E-CLIP Sketchfab API. This enables the generation of multiple chair models that can then be transferred across different platforms using LLMR for further interaction.
                         </h2>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End image carousel -->
-    
-    
     <!-- Youtube video -->
-   <!-- <section class="hero is-small is-light">
-        <div class="hero-body">
-            <div class="container"> -->
-                <!-- Paper video. -->
-            <!--   <h2 class="title is-3">Video Presentation</h2>
-                <div class="columns is-centered has-text-centered">
-                    <div class="column is-four-fifths">
+    <!-- <section class="hero is-small is-light">
+         <div class="hero-body">
+             <div class="container"> -->
+    <!-- Paper video. -->
+    <!--   <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
 
-                        <div class="publication-video">  --> 
-                            <!-- Youtube embed code here -->
-             <!--             <iframe src="https://www.youtube.com/embed/6_9IcuKLwdc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="publication-video">  -->
+    <!-- Youtube embed code here -->
+    <!--             <iframe src="https://www.youtube.com/embed/6_9IcuKLwdc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    -->  
+    </section>    -->
     <!-- End youtube video -->
     <!-- Paper abstract -->
     <section class="section hero is-light">
@@ -241,14 +239,14 @@
                     <h2 class="title is-3">How does LLMR work?</h2>
                     <div class="content has-text-justified">
                         <p>
-                        LLMR is an orchestration of an ensemble of specialized GPTs. At its center is the BuilderGPT serving as an architect of C# Unity code for crafting interactive scenes. However, the multitude of tasks falling under virtual world creation renders a standalone coder insufficient. For instance, the ability to meaningfully modify an existing virtual world necessitates a profound semantic understanding of the scene. As humans, we have the ability to infer the properties of objects in the world and can refer to objects in the environment using demonstratives. To simulate the benefits of perceptual access, we incorporated the Scene Analyzer GPT. It generates a comprehensive summary of scene objects, offering detailed information when requested, including aspects like size, color, and the functionalities of interactive tools previously generated by LLMR. We also implemented the Skill Library GPT that determines the relevant skills that are needed for the Builder to accomplish the user’s request. In addition, we have observed that the code generated by the Builder lacks robustness and frequently contains bugs. To remedy this, we introduce the InspectorGPT, which evaluates the Builder's code against a predefined set of rules. This evaluation acts as a protective measure against compilation and run-time errors before the code is executed via the Roslyn Compiler.                        </p>
+                            LLMR is an orchestration of an ensemble of specialized GPTs. At its center is the BuilderGPT serving as an architect of C# Unity code for crafting interactive scenes. However, the multitude of tasks falling under virtual world creation renders a standalone coder insufficient. For instance, the ability to meaningfully modify an existing virtual world necessitates a profound semantic understanding of the scene. As humans, we have the ability to infer the properties of objects in the world and can refer to objects in the environment using demonstratives. To simulate the benefits of perceptual access, we incorporated the Scene Analyzer GPT. It generates a comprehensive summary of scene objects, offering detailed information when requested, including aspects like size, color, and the functionalities of interactive tools previously generated by LLMR. We also implemented the Skill Library GPT that determines the relevant skills that are needed for the Builder to accomplish the user’s request. In addition, we have observed that the code generated by the Builder lacks robustness and frequently contains bugs. To remedy this, we introduce the InspectorGPT, which evaluates the Builder's code against a predefined set of rules. This evaluation acts as a protective measure against compilation and run-time errors before the code is executed via the Roslyn Compiler.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End paper abstract -->
-
     <!-- Image carousel -->
     <section class="hero is-small">
         <div class="hero-body">
@@ -286,7 +284,7 @@
                         <!-- Your image here -->
                         <img src="static/images/skillLib.png" alt="A diagram representing the workflow of the Skill Library module. The module receives inputs from the Scene Analyzer and a user prompt, and then outputs the most relevant skills to the Builder for implementation." />
                         <h2 class="subtitle has-text-centered">
-                            Skill Library module workflow. On the left, the module receives inputs from the Scene Analyzer and a user prompt "create a whale and make it swim happily". A list of skills is provided to the SL GPT module in its metaprompt, which also contains a high-level summary of available skills such as object retrieval and animation. The module then identifies and outputs the most relevant skills (in this case, object retriever and animation) to the Builder, which subsequently utilizes these tools for implementation.                        
+                            Skill Library module workflow. On the left, the module receives inputs from the Scene Analyzer and a user prompt "create a whale and make it swim happily". A list of skills is provided to the SL GPT module in its metaprompt, which also contains a high-level summary of available skills such as object retrieval and animation. The module then identifies and outputs the most relevant skills (in this case, object retriever and animation) to the Builder, which subsequently utilizes these tools for implementation.
                         </h2>
                     </div>
                     <div class="item">
@@ -301,6 +299,41 @@
         </div>
     </section>
     <!-- End image carousel -->
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">
+                        Real-time Animation Generation and Control on
+                        Rigged Models via Large Language Models
+                    </h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            We found that LLMR can be used to generate novel animations on a given 3D model using only natural language descriptions. Our method outputs structured strings encoding positional and rotational time series for each joint, which are parsed to produce animations on the rigged object. We showcase the generated animations on hierarchically distinct models with a variety of motions to underscore the robustness of our approach.
+                            Separately, LLMR can be used to program animation transition on humanoid characters via the generation and execution of appropriate Unity C\# scripts. Our approach is characterized by its flexibility, allowing for the seamless integration of pre-existing animations with custom game logic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <video poster="" id="tree" autoplay controls muted loop height="100%">
+                    <!-- Your video here -->
+                    <source src="static/videos/animations.mp4"
+                            type="video/mp4">
+                </video>
+                <h2 class="subtitle has-text-centered">
+                    One-shot and zero-shot generation of animations using Large Language Models
+                </h2>
+            </div>
+        </div>
+    </section>
 
     <!-- Video carousel -->
     <section class="hero is-small">
@@ -311,16 +344,19 @@
                     <div class="item item-video1">
                         <video poster="" id="video1" autoplay controls muted loop height="100%">
                             <!-- Your video file here -->
-                            <source src="static/videos/animations.mp4"
+                            <source src="static/videos/Participant_Generated_Results.mp4"
                                     type="video/mp4">
                         </video>
                     </div>
                     <div class="item item-video2">
                         <video poster="" id="video2" autoplay controls muted loop height="100%">
                             <!-- Your video file here -->
-                            <source src="static/videos/Participant_Generated_Results.mp4"
+                            <source src="static/videos/archer_walking.mp4"
                                     type="video/mp4">
                         </video>
+                        <h2 class="subtitle has-text-centered">
+                            Controlling existing animations using LLMR
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -340,7 +376,6 @@
         </div>
       </section>-->
     <!--End paper poster -->
-
     <!--BibTex citation -->
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
@@ -353,6 +388,13 @@
     eprint={2309.12276},
     archivePrefix={arXiv},
     primaryClass={cs.HC}
+    }
+
+    @article{huang2023real,
+    title={Real-time Animation Generation and Control on Rigged Models via Large Language Models},
+    author={Huang, Han and De La Torre, Fernanda and Fang, Cathy Mengying and Banburski-Fahey, Andrzej and Amores, Judith and Lanier, Jaron},
+    journal={arXiv preprint arXiv:2310.17838},
+    year={2023}
     }
 </code></pre>
         </div>
